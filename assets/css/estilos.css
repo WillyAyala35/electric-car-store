@@ -36,8 +36,8 @@ main {
 }
 
 main .cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -65,7 +65,7 @@ main .cards {
   align-items: center;
   width: 150px;
   height: 50px;
-  background: blue;
+  background: black;
   color: white;
   border: none;
   cursor: pointer;
@@ -80,15 +80,13 @@ main .cards {
 .página {
   display: block;
   justify-content: center;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 100px;
   margin-top: 35px;
-  
 }
 
 footer {
   grid-area: Fin;
-  background: blue;
+  background: black;
   color: white;
   display: block;
   text-align: center;
@@ -96,14 +94,47 @@ footer {
 }
 
 @media (min-width: 576px) {
-    body {
-        grid-template-areas:
-          "Navegador Buscador"
-          "Navegador Contenido"
-          "Fin Contenido";
-        grid-template-columns: 200px calc(100vw - 200px);
-        grid-template-rows: 100px calc(100vh - 100px - 100px) 100px;
-      }
-    
+  body {
+    grid-template-areas:
+      "Navegador Navegador"
+      "Buscador Contenido"
+      "Fin Fin";
+    grid-template-columns: 200px calc(100vw - 200px);
+    grid-template-rows: 100px calc(100vh - 100px - 100px) 100px;
+  }
 
+  main .card {
+    margin-left: 100px;
+  }
+
+  main .página {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    grid-template-areas:
+      "Navegador Buscador"
+      "Navegador Contenido"
+      "Fin Contenido";
+    grid-template-columns: 200px calc(100vw - 200px);
+    grid-template-rows: 100px calc(100vh - 100px - 100px) 100px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    b
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  main .página {
+    display: flex;
+  }
 }
